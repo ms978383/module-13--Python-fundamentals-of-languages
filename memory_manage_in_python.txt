@@ -1,0 +1,44 @@
+
+
+********Memory is managed in Python ------------
+
+
+
+According to the Python memory management documentation, Python has a private heap that stores our program’s objects and data structures. Python memory manager takes care of the bulk of the memory management work and allows us to concentrate on our code.
+
+****Types of memory allocation-
+
+
+There are two types of memory allocation in Python, static and dynamic.
+
+1. Static memory
+
+
+The stack data structure provides static memory allocation, meaning the variables are in the stack memory. Statically assigned variables, as the name implies, are permanent; this means that they must be allocated in advance and persist for the duration of the program. Another point to remember is that we cannot reuse the memory allocated in the stack memory. Therefore, memory reusability is not possible.
+
+2. Dynamic memory
+
+
+The dynamic memory allocation uses heap data structures in its implementation, implying that variables are in the heap memory. As the name suggests, dynamically allocated variables are not permanent and can be changed while a program is running. Additionally, allotted memory can be relinquished and reused. However, it takes longer to complete because dynamic memory allocation occurs during program execution. Furthermore, after utilizing the allocated memory, we must release it. Otherwise, problems such as memory leaks might arise.
+
+ 
+***Python garbage collection-----
+
+
+The Python garbage collector handles memory allocation and deallocation automatically in Python. Python developers have designed it to eliminate the need for manual garbage collection. Garbage collection in Python refers to the interpreter’s memory management process of freeing up unneeded and undesired memory for our applications.
+
+Note: Python uses garbage collection to release memory blocks no longer in use.
+
+The garbage collector (GC) operates in the background and is triggered when the reference count reaches zero.
+
+**The reference count rises when the following occur:
+-An object is given a new name
+-An object is placed in a container, such as a tuple or a dictionary
+
+**The reference count lowers when the following occurs:
+-An object’s reference is reassigned
+-An object’s reference moves out of scope
+-An object is removed
+
+
+The memory is a heap that stores the program’s objects and other data structures. The Python memory manager uses API methods to handle the allocation and deallocation of this heap space.
